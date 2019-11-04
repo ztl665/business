@@ -1,0 +1,7 @@
+git init ：初始化一个空的工作空间
+git add filename：将文件提交到暂存区
+git commit -m "对提交文件的描述" ：清空暂存区，将暂存区内文件一次性提交到本地仓库
+
+git status：查看文件状态
+git log：对文件提交的记录
+git reset --hard 某一次提交的版本号：版本回退，查看某一次提交的文件
