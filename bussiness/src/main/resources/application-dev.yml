@@ -1,0 +1,49 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+limit:
+  minMoney: 2
+  maxMoney: 100
+  desc: 最低${limit.minMoney} 最高${limit.maxMoney}
+
+
+mybatis:
+  mapper-locations: classpath*:com/bussiness/mapper/*Mapper.xml
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/shopping?charset=utf8&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123
+      max-active: 20
+      max-wait: 6000
+      min-idle: 1
+      test-on-borrow: true
+      test-on-return: true
+  thymeleaf:
+    mode: HTML5
+  http:
+    encoding:
+      force: true
+      enabled: true
+      charset: UTF-8
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
+
+logging:
+  level:
+    com.neuedu.dao: debug
+
+
